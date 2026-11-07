@@ -17,6 +17,7 @@
     "@portabletext/react": "^7.0.1",
     "@sanity/client": "^7.28.0",
     "@sanity/image-url": "^2.1.1",
+    "@sanity/vision": "^5.31.2",
     "@studio-freight/lenis": "^1.0.42",
     "clsx": "^2.1.1",
     "framer-motion": "^14.10.1",
