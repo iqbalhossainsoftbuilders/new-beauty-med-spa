@@ -1,0 +1,8 @@
+export { TreatmentLayout } from './TreatmentLayout'
+export { TreatmentHero } from './TreatmentHero'
+export { TreatmentOverview } from './TreatmentOverview'
+export { TreatmentBenefits } from './TreatmentBenefits'
+export { TreatmentProcess } from './TreatmentProcess'
+export { TreatmentFAQ } from './TreatmentFAQ'
+export { TreatmentCTA } from './TreatmentCTA'
+export { RelatedTreatments } from './RelatedTreatments'
