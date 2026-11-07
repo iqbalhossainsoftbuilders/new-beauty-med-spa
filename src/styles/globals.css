@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+    --font-playfair: 'Playfair Display', Georgia, serif;
+    --font-manrope: 'Manrope', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-ivory text-espresso font-manrope;
+    overflow-x: hidden;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Lenis smooth scroll */
+  html.lenis {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+}
+
+@layer components {
+  /* Glass morphism panel */
+  .glass-panel {
+    background: rgba(230, 213, 195, 0.25);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(184, 155, 121, 0.2);
+    box-shadow: 0 4px 24px rgba(73, 58, 50, 0.1), inset 0 1px 0 rgba(255,255,255,0.4);
+  }
+
+  /* 3D card tilt on hover — CSS only */
+  .card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .card-3d:hover {
+    transform: perspective(800px) rotateY(4deg) rotateX(-2deg) translateY(-4px);
+  }
+
+  /* Gold accent line */
+  .gold-line {
+    @apply block w-12 h-px bg-gold mx-auto my-4;
+  }
+
+  /* Section label — small tracked uppercase */
+  .section-label {
+    @apply font-manrope text-xs tracking-wide-2xl uppercase text-gold;
+  }
+
+  /* Button base */
+  .btn {
+    @apply inline-flex items-center justify-center font-manrope font-semibold text-xs tracking-wide-xl uppercase
+      transition-all duration-300 ease-luxury cursor-pointer;
+  }
+  .btn-primary {
+    @apply btn bg-champagne text-espresso px-8 py-4 hover:bg-gold hover:text-white;
+  }
+  .btn-outline {
+    @apply btn border border-current px-8 py-4 hover:bg-espresso hover:text-ivory hover:border-espresso;
+  }
+  .btn-dark {
+    @apply btn bg-espresso text-ivory px-8 py-4 hover:bg-charcoal;
+  }
+  .btn-gold {
+    @apply btn bg-gold text-white px-8 py-4 hover:bg-espresso;
+  }
+}
+
+@layer utilities {
+  /* Respect prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Text clip gradient */
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #B89B79, #E5D5C3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Full bleed image with object-cover */
+  .img-cover {
+    @apply w-full h-full object-cover;
+  }
+}
