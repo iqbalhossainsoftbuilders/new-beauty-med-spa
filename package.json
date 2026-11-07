@@ -6,21 +6,45 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
+    "@portabletext/react": "^7.0.1",
+    "@sanity/client": "^7.28.0",
+    "@sanity/image-url": "^2.1.1",
+    "@studio-freight/lenis": "^1.0.42",
+    "clsx": "^2.1.1",
+    "framer-motion": "^14.10.1",
+    "gsap": "^3.15.1",
+    "next": "14.2.35",
+    "next-sanity": "^9.12.3",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.35"
+    "sanity": "^5.31.2",
+    "splitting": "^1.1.0",
+    "swiper": "^14.4.0",
+    "tailwind-merge": "^3.7.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@playwright/test": "^1.65.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/splitting": "^1.0.6",
+    "@vitejs/plugin-react": "^6.2.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35",
+    "jsdom": "^29.1.1",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.35"
+    "typescript": "^5",
+    "vitest": "^4.1.12"
   }
 }
