@@ -1,0 +1,7 @@
+export { HeroSection } from './HeroSection'
+export { TreatmentDiscovery } from './TreatmentDiscovery'
+export { BrandStatement } from './BrandStatement'
+export { FeaturedTreatments } from './FeaturedTreatments'
+export { PackagesTeaser } from './PackagesTeaser'
+export { TestimonialsSection } from './TestimonialsSection'
+export { AboutTeaser } from './AboutTeaser'
