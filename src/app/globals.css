@@ -111,3 +111,8 @@
     @apply w-full h-full object-cover;
   }
 }
+
+@keyframes kenburns {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.08) translate(-1%, -1%); }
+}

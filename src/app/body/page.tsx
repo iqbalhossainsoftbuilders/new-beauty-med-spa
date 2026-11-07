@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { localTreatments } from '@/data/treatments'
 import { BOOKING_URL } from '@/lib/utils'
+import { IMAGES } from '@/lib/images'
 
 export const metadata: Metadata = {
   title: 'Body Treatments | New Beauty Med Spa Encino',
@@ -14,8 +16,17 @@ export default function BodyPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-charcoal text-ivory">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="relative pt-32 pb-16 overflow-hidden bg-charcoal text-ivory min-h-[50vh] flex items-end">
+        <Image
+          src={IMAGES.heroBody}
+          alt="Body treatments"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/70 to-charcoal/30" />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
           <p className="section-label text-gold mb-4">Body Contouring</p>
           <h1 className="font-cormorant text-display text-ivory font-light leading-none mb-4">
             Body Treatments

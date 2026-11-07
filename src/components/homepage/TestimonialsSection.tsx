@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import { IMAGES } from '@/lib/images'
+
 const TESTIMONIALS = [
   {
     quote: "The team at New Beauty is absolutely incredible. After my HIFU treatment, I look 10 years younger — and everyone notices!",
@@ -21,8 +24,10 @@ const TESTIMONIALS = [
 
 export function TestimonialsSection() {
   return (
-    <section className="py-24 bg-espresso">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="relative py-24">
+      <Image src={IMAGES.beautyProducts} alt="" fill className="object-cover object-center opacity-10" sizes="100vw" aria-hidden />
+      <div className="absolute inset-0 bg-espresso/95" />
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="section-label text-gold mb-4">Client Stories</p>
           <h2 className="font-cormorant text-editorial text-ivory">
