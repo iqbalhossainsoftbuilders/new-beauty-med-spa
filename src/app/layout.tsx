@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Cormorant_Garamond, Playfair_Display, Manrope } from 'next/font/google'
 import { LenisProvider } from '@/components/providers'
+import { SiteHeader } from '@/components/layout'
+import { SiteFooter } from '@/components/layout'
+import { MobileBookingBar } from '@/components/layout'
 import Script from 'next/script'
 import '@/app/globals.css'
 
@@ -67,7 +70,10 @@ export default function RootLayout({
           </>
         )}
         <LenisProvider>
-          {children}
+          <SiteHeader />
+          <main className="pt-20">{children}</main>
+          <SiteFooter />
+          <MobileBookingBar />
         </LenisProvider>
       </body>
     </html>
